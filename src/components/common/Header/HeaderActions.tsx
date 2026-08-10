@@ -1,49 +1,58 @@
 import Link from "next/link";
-import React from "react";
+import { CalendarDays } from "lucide-react";
 
 export default function HeaderActions() {
   return (
-    <ul className="flex gap-8 items-center  text-[var(--color-primary-foreground)]">
-      <li className="mr-4">
-        <Link
-          href="/login"
-          className="
-          px-4 
-          py-2
-        text-white/80 
-        transition-colors 
-        duration-200 
-        hover:text-[var(--color-accent)] 
-        relative after:content-[''] 
-        after:absolute after:bottom-0 
-        after:right-0 after:w-0 
-        after:h-[2px] 
-        after:bg-[var(--color-accent)] 
-        after:transition-all 
-        after:duration-300 
-        hover:after:w-full"
-        >
-          ورود
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/register"
-          className=" 
-          px-5 
-          py-2 
-          bg-[var(--color-accent)] 
-          text-[var(--color-primary)] 
-          font-medium rounded-lg 
-          hover:bg-[var(--color-accent-hover)] 
-          transition-all 
-          duration-200 
-          shadow-sm 
-          hover:shadow-md "
-        >
-          شروع رایگان
-        </Link>
-      </li>
-    </ul>
+    <div className="flex items-center gap-4">
+      <Link
+        href="/login"
+        className="
+          inline-flex
+          h-12
+          items-center
+          justify-center
+          rounded-lg
+          border
+          border-gray-200
+          px-6
+          text-[15px]
+          font-medium
+          text-[var(--color-text-primary)]
+          transition-colors
+          duration-200
+          hover:border-[var(--color-brand-purple)]
+          hover:text-[var(--color-brand-purple)]
+        "
+      >
+        ورود
+      </Link>
+
+      <Link
+        href="/register"
+        className="
+          inline-flex
+          h-12
+          items-center
+          justify-center
+          gap-2
+          whitespace-nowrap
+          rounded-lg
+          bg-[var(--color-brand-purple)]
+          px-6
+          !text-[15px]
+          font-medium
+          !text-white
+          shadow-sm
+          transition-all
+          duration-200
+          hover:bg-[var(--color-brand-purple-hover)]
+          hover:shadow-md
+        "
+      >
+        <CalendarDays size={18} strokeWidth={1.8} />
+        <span>درخواست دمو</span>
+
+      </Link>
+    </div>
   );
 }

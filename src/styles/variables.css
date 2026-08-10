@@ -1,81 +1,44 @@
 :root {
-  /* ===========================
-     Brand
-  =========================== */
+  /* Brand */
+  --color-primary: #252329;
+  --color-primary-light: #77727a;
+  --color-primary-foreground: #ffffff;
 
-  --color-primary: #0f172a;
-  --color-primary-light: #1e293b;
-  --color-primary-foreground: rgba(255,255,255,0.75);
+  --color-brand-purple: #351080;
+  --color-brand-purple-hover: #5e28bb;
 
-  --color-accent: #18c8ff;
-  --color-accent-hover: #0ea5e9;
-  --color-accent-soft: #e0f7ff;
+  --color-accent: #769b82;
+  --color-accent-hover: #5d9690;
 
-  /* ===========================
-     Background
-  =========================== */
-
-  --color-background: #f8fafc;
+  /* Background */
+  --color-background: #f9f8f5;
   --color-surface: #ffffff;
-  --color-surface-alt: #f1f5f9;
+  --color-surface-alt: #f0eee8;
 
-  /* ===========================
-     Border
-  =========================== */
+  /* Border */
+  --color-border: #e5e1da;
+  --color-divider: #e5e1da;
 
-  --color-border: #e2e8f0;
-  --color-divider: #cbd5e1;
+  /* Typography */
+  --color-text-primary: #323035;
+  --color-text-secondary: #77727a;
+  --color-text-tertiary: #77727a;
+  --color-text-disabled: #e5e1da;
 
-  /* ===========================
-     Typography
-  =========================== */
+  /* Semantic */
+  --color-success: #769b82;
+  --color-warning: #c6a15b;
+  --color-danger: #c58e9e;
+  --color-info: #5d9690;
 
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-text-tertiary: #64748b;
-  --color-text-disabled: #94a3b8;
-
-  /* ===========================
-     Semantic
-  =========================== */
-
-  --color-success: #22c55e;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
-  --color-info: #0ea5e9;
-
-  /* ===========================
-     Dashboard
-  =========================== */
-
-  --color-sidebar: #0f172a;
-  --color-sidebar-hover: #1e293b;
-  --color-sidebar-active: #18c8ff;
-
-  --color-card: #ffffff;
-  --color-card-border: #e2e8f0;
-
-  /* ===========================
-     AI
-  =========================== */
-
-  --color-ai-purple: #7c3aed;
-  --color-ai-cyan: #18c8ff;
-
-  /* ===========================
-     Radius
-  =========================== */
-
+  /* Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 18px;
   --radius-xl: 24px;
 
-  /* ===========================
-     Shadow
-  =========================== */
-
-  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08);
-  --shadow-md: 0 6px 16px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 12px 28px rgb(0 0 0 / 0.14);
+  /* Shadow */
+  --shadow-sm: 0 1px 3px rgb(37 35 41 / 0.08);
+  --shadow-md: 0 6px 16px rgb(37 35 41 / 0.1);
+  --shadow-lg: 0 12px 28px rgb(37 35 41 / 0.14);
 }

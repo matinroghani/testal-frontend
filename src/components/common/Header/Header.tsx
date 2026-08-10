@@ -5,35 +5,30 @@ import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   return (
-    <header className="w-full bg-[var(--color-primary)] border-b border-[var(--color-border)]">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="w-full bg-white">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8">
+        <nav className="flex h-[92px] items-center justify-between">
 
-        {/* Right Side */}
-        <div className="flex items-center gap-10">
-
+          {/* Logo */}
           <HeaderLogo />
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex">
             <HeaderNavigation />
           </div>
 
-        </div>
-
-        {/* Left Side */}
-        <div className="flex items-center">
-
           {/* Desktop Actions */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex">
             <HeaderActions />
           </div>
 
           {/* Mobile */}
-          <MobileMenu />
+          <div className="lg:hidden">
+            <MobileMenu />
+          </div>
 
-        </div>
-
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
