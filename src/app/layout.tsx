@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { yekanBakh } from "@/lib/font";
 import Header from "@/components/common/Header/Header";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,13 +21,22 @@ export default function RootLayout({
     <html
       lang="fa"
       dir="rtl"
-      className={` ${yekanBakh.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", yekanBakh.variable, "font-sans", geist.variable)}
     >
-      <body className="min-h-full flex flex-col">
-        <Header/>
-        {children}
-        
-        </body>
+      <body
+        className="min-h-full
+          px-4
+          sm:px-6
+          md:px-8
+          lg:px-10
+          xl:px-12
+          2xl:px-16"
+      >
+        <div className="container mx-auto flex-1 w-full">
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

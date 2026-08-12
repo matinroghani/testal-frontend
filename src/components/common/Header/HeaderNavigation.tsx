@@ -22,7 +22,7 @@ export default function HeaderNavigation() {
               ${
                 item.active
                   ? "!text-[var(--color-brand-purple)]"
-                  : "text-[var(--color-text-primary)] hover:text-[var(--color-brand-purple)]"
+                  : "!text-[var(--color-text-primary)] hover:text-[var(--color-brand-purple)]"
               }
             `}
           >

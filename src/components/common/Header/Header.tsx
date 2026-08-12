@@ -1,34 +1,38 @@
 import HeaderNavigation from "./HeaderNavigation";
 import HeaderLogo from "./HeaderLogo";
-import HeaderActions from "./HeaderActions";
 import MobileMenu from "./MobileMenu";
+import { CalendarDays } from "lucide-react";
+import MainAction from "../../ui/MainAction";
 
 export default function Header() {
   return (
-    <header className="w-full bg-white">
-      <div className="mx-auto max-w-[1440px] px-5 sm:px-8">
-        <nav className="flex h-[92px] items-center justify-between">
+    <header>
+      <nav className="flex items-center justify-between py-5">
+        {/* Logo */}
+        <HeaderLogo />
 
-          {/* Logo */}
-          <HeaderLogo />
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex">
+          <HeaderNavigation />
+        </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex">
-            <HeaderNavigation />
-          </div>
+        {/* Desktop Actions */}
+        <div className="items-center gap-4 hidden lg:flex">
+          <MainAction href="/login" text="ورود" variant="ghost" />
 
-          {/* Desktop Actions */}
-          <div className="hidden lg:flex">
-            <HeaderActions />
-          </div>
+          <MainAction
+            href="/register"
+            text="درخواست دمو"
+            icon={CalendarDays}
+            variant="primary"
+          />
+        </div>
 
-          {/* Mobile */}
-          <div className="lg:hidden">
-            <MobileMenu />
-          </div>
-
-        </nav>
-      </div>
+        {/* Mobile */}
+        <div className="lg:hidden">
+          <MobileMenu />
+        </div>
+      </nav>
     </header>
   );
 }
